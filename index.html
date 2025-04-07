@@ -1,0 +1,210 @@
+
+<html>
+<head>
+
+  <!-- 使用 link 標籤引入外部 CSS 檔案 -->
+  
+  <link rel="stylesheet" href="ucuf.css">
+   
+</head>
+<body>
+  <form class="ch">
+    <div class="HUGE">  
+    <div class="BIG">   
+    
+    <div class="uu0">   
+        <legend class="title">建立新帳號</legend>
+    </div>
+        <div class="jset">   
+    
+    <div class="uu1">
+        <div class="form-group">
+        <legend>使用者名稱</legend>
+        <input class="uub" type="text" placeholder="請輸入使用者名稱">
+      </div>
+      
+      <div class="form-group">
+        <legend>電子郵件</legend>
+        <input class="uub" type="email" placeholder="請輸入電子郵件">
+      </div>
+      
+      <div class="form-group">
+        <legend>密碼</legend>
+        <input class="uub" type="password" placeholder="請輸入密碼">
+      </div>
+
+      <div class="form-group">
+        <legend>確認密碼</legend>
+        <input class="uub" type="password" placeholder="請再輸入一次密碼">
+      </div>
+    </div>
+
+    <div class="uu2">
+        <div class="uu21">
+        <legend class="uu2u">生日</legend>
+            <div class="date">
+                <input class="day" type="date" name="day">
+
+            </div>
+            </div>
+            
+        <div class="uu22">
+         <legend class="uu2u">性別</legend>
+          <div class="uu222">
+            <label class="girll">
+                <input name="mm"  type="radio" onclick="toggleOtherInput()" >
+
+                </label>
+            <span class="B1">男</span>
+            
+        
+        </label>
+            <label class="girll">
+                <input name="mm"  type="radio" onclick="toggleOtherInput()" >
+
+                </label>
+            <span class="B1">女</span>
+            
+        
+        </label>
+
+        </label>
+            <label class="yeee">
+                
+                <label class="girll">
+                <input  value="other" name="mm" type="radio" onclick="toggleOtherInput()">
+                <span class="B1">更多</span>
+    
+                </label>
+                <input class="mmmm" type="text" id="otherInput" style="display: none;" >
+                
+
+
+                </label>
+           
+            
+        
+        </label>
+      </div>
+    </div>
+    </div>
+
+      
+      <div class="uu3">         
+        <legend class="sex">嗜好</legend>
+        <div class="uu31">
+        <div class="bb">
+        <div class="u111">
+        <label for="uu31111" >
+            <input class="uuu" type="checkbox" name="yeah">
+            <span class="31">關掉鬧鐘繼續睡</span>
+        </label>
+        <label for="uu31111" >
+          <input class="uuu" type="checkbox" name="yeah">
+          <span class="31">畫畫</span>
+      </label>
+      <label for="uu31111" >
+        <input class="uuu" type="checkbox" name="yeah">
+        <span class="31">在床上熬夜</span>
+    </label>
+  </div>
+    <div class="u112">
+
+        <label for="uu3211">
+            <input class="uuu" type="checkbox" name="yeah">
+            <span class="32">腦袋搖滾</span>
+        </label>
+        
+    
+        <label for="uu3211">
+            <input class="uuu" type="checkbox" name="yeah">
+
+            
+            <span class="33">想要吃什麼</span>
+        </label>
+     
+    
+    
+        <label class="uu3211">
+            <input class="uuu" type="checkbox" name="yeah">
+
+           
+           <span class="34">打球</span>
+        </label>
+      </div>
+        <div class="u113">
+
+          <label class="uu3311">
+            <input class="uuu" type="checkbox" name="yeah">
+
+           
+           <span class="34">自創程式碼看他會不會動</span>
+        </label>
+
+        <label class="uu3u">
+            
+        
+            <input class="uu3uu3" type="checkbox" name="yeah">
+            <span class="其他">還有</span>
+
+            <input class="yee" type="text" name="genderyee">
+            
+
+
+        </div>
+        </label>
+      </div>
+       
+       </div>
+
+
+      </div>
+
+
+
+
+        <div class="uu4"> 
+        <legend class="shokai">自我介紹</legend>
+        <div class="uuu4">
+            <label class="ee">
+                <textarea class="eee" textarea placeholder-style="color:#ccc,font-size=12px;" placeholder="Hello"></textarea>
+
+                </label>
+         
+        
+        </div>
+      </div>
+         <div class="uu5">
+         <button type="submit" class="final">建立</button>
+         </div>
+
+
+
+</div>
+</div>
+</form>
+
+<!-- JavaScript 部分：控制輸入框的顯示與隱藏 --我不知道確教我寫的寫不出第二個-->
+<script>
+    function toggleOtherInput() {
+      // 取得「其他」那個 radio button
+      const otherRadio = document.querySelector('input[name="mm"][value="other"]');
+  
+      // 取得那個文字輸入欄位
+      const otherInput = document.getElementById('otherInput');
+  
+      // 檢查是否選到「其他」
+      if (otherRadio.checked) {
+        // 如果有選，顯示輸入欄位
+        otherInput.style.display = 'inline-block';
+      } else {
+        // 沒選的話就隱藏起來
+        otherInput.style.display = 'none';
+        // （可選）順便清空裡面的文字
+        otherInput.value = '';
+      }
+    }
+  </script>
+ 
+</body>
+</html>
